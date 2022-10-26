@@ -13,7 +13,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
   Widget build(BuildContext context) {
     return BottomAppBar(
       shape: const CircularNotchedRectangle(),
-      color: const Color.fromRGBO(52, 152, 219, 1),
+      color: const Color.fromRGBO(46, 204, 113, 1),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -29,8 +29,11 @@ class _BottomNavbarState extends State<BottomNavbar> {
                       //   return MainMenu();
                       // }));
                     },
-                    icon: const FaIcon(FontAwesomeIcons.house,
-                        color: Colors.white)),
+                    icon: const FaIcon(
+                      FontAwesomeIcons.house,
+                      color: Colors.white,
+                      size: 30,
+                    )),
                 IconButton(
                     onPressed: () {
                       // Navigator.pushReplacement(context,
@@ -38,8 +41,11 @@ class _BottomNavbarState extends State<BottomNavbar> {
                       //   return DaftarMotor();
                       // }));
                     },
-                    icon: const FaIcon(FontAwesomeIcons.cartShopping,
-                        color: Colors.white)),
+                    icon: const FaIcon(
+                      FontAwesomeIcons.cartShopping,
+                      color: Colors.white,
+                      size: 30,
+                    )),
                 IconButton(
                     onPressed: () {
                       // Navigator.pushReplacement(context,
@@ -50,6 +56,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
                     icon: const FaIcon(
                       FontAwesomeIcons.lemon,
                       color: Colors.white,
+                      size: 30,
                     )),
               ],
             ),

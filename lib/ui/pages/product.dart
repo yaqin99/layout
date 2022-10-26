@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:layout/component/bottomNavBar.dart';
+import 'package:layout/component/floatButton.dart';
 import 'package:layout/ui/widgets/movieBox.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -37,7 +38,9 @@ class _ProductState extends State<Product> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: const BottomNavbar(),
+      bottomNavigationBar: SizedBox(
+          height: MediaQuery.of(context).size.height * 0.1,
+          child: const BottomNavbar()),
       body: Column(
         children: [
           Container(
@@ -78,8 +81,8 @@ class _ProductState extends State<Product> {
           ),
           Container(
             // margin: const EdgeInsets.only(top: 10),
-            // decoration: BoxDecoration(border: Border.all(color: Colors.black)),
-            height: MediaQuery.of(context).size.height * 0.1,
+            decoration: BoxDecoration(border: Border.all(color: Colors.black)),
+            height: MediaQuery.of(context).size.height * 0.065,
             width: MediaQuery.of(context).size.width * 0.8,
             child: Center(
               child: Row(
@@ -117,7 +120,7 @@ class _ProductState extends State<Product> {
               ),
             ),
           ),
-          Expanded(
+          Flexible(
             child: PageView.builder(
                 controller: controller,
                 itemCount: film.length,
@@ -141,34 +144,45 @@ class _ProductState extends State<Product> {
                 }),
           ),
           Container(
-            margin: const EdgeInsets.only(
-              bottom: 70,
-            ),
-            // decoration: BoxDecoration(border: Border.all(color: Colors.black)),
+            decoration: BoxDecoration(border: Border.all(color: Colors.black)),
+            width: MediaQuery.of(context).size.width * 0.8,
             height: MediaQuery.of(context).size.height * 0.1,
-            width: MediaQuery.of(context).size.width * 0.6,
+            margin: EdgeInsets.only(bottom: 40, right: 20),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const [
-                FaIcon(
-                  FontAwesomeIcons.whatsapp,
-                  size: 40,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(
+                    bottom: 30,
+                  ),
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: const [
+                      FaIcon(
+                        FontAwesomeIcons.whatsapp,
+                        size: 40,
+                      ),
+                      FaIcon(
+                        FontAwesomeIcons.instagram,
+                        size: 40,
+                      ),
+                      FaIcon(
+                        FontAwesomeIcons.facebook,
+                        size: 40,
+                      ),
+                      FaIcon(
+                        FontAwesomeIcons.youtube,
+                        size: 40,
+                      ),
+                    ],
+                  ),
                 ),
-                FaIcon(
-                  FontAwesomeIcons.instagram,
-                  size: 40,
-                ),
-                FaIcon(
-                  FontAwesomeIcons.facebook,
-                  size: 40,
-                ),
-                FaIcon(
-                  FontAwesomeIcons.youtube,
-                  size: 40,
-                ),
+                const FLoatButton(),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
