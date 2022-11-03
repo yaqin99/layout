@@ -80,8 +80,7 @@ class _ProductState extends State<Product> {
             ),
           ),
           Container(
-            // margin: const EdgeInsets.only(top: 10),
-            decoration: BoxDecoration(border: Border.all(color: Colors.black)),
+            margin: const EdgeInsets.only(top: 10),
             height: MediaQuery.of(context).size.height * 0.065,
             width: MediaQuery.of(context).size.width * 0.8,
             child: Center(
@@ -110,7 +109,7 @@ class _ProductState extends State<Product> {
                         height: 60,
                         child: FaIcon(
                           FontAwesomeIcons.circleInfo,
-                          color: Colors.green,
+                          color: Color.fromRGBO(46, 204, 113, 1),
                           size: 50,
                         ),
                       ),
@@ -144,18 +143,16 @@ class _ProductState extends State<Product> {
                 }),
           ),
           Container(
-            decoration: BoxDecoration(border: Border.all(color: Colors.black)),
+            // decoration: BoxDecoration(border: Border.all(color: Colors.black)),
             width: MediaQuery.of(context).size.width * 0.8,
             height: MediaQuery.of(context).size.height * 0.1,
-            margin: EdgeInsets.only(bottom: 40, right: 20),
+            margin: const EdgeInsets.only(bottom: 40, right: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Container(
-                  margin: const EdgeInsets.only(
-                    bottom: 30,
-                  ),
+                SizedBox(
+                  // decoration:
+                  // BoxDecoration(border: Border.all(color: Colors.black)),
                   width: MediaQuery.of(context).size.width * 0.5,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -179,7 +176,7 @@ class _ProductState extends State<Product> {
                     ],
                   ),
                 ),
-                const FLoatButton(),
+                const FLoatButton()
               ],
             ),
           ),

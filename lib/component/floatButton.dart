@@ -18,7 +18,7 @@ class _FLoatButtonState extends State<FLoatButton> {
     return Visibility(
       visible: widget.visible,
       child: FloatingActionButton(
-        backgroundColor: const Color.fromRGBO(52, 152, 219, 1),
+        backgroundColor: const Color.fromRGBO(46, 204, 113, 1),
         onPressed: () {
           // Navigator.push(context, MaterialPageRoute(builder: (context) {
           //   return const QrScan();
